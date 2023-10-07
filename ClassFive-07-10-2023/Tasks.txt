@@ -1,0 +1,3 @@
+Make examples of all the events
+
+On button click show different colors
