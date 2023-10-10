@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Loop</title>
+</head>
+<body>
+    <div id="colorDiv" style="width: 100px; height: 100px; background-color: red;"></div>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+        // Array of colors
+        const colors = ["red", "green", "blue", "yellow", "orange"];
+        
+        // Get references to the button and the color div
+        const changeColorButton = document.getElementById("changeColorButton");
+        const colorDiv = document.getElementById("colorDiv");
+        
+        // Initialize colorIndex to 0
+        let colorIndex = 0;
+        
+        // Function to change the color
+        function changeColor() {
+            colorDiv.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+        
+        // Add click event listener to the button
+        changeColorButton.addEventListener("click", changeColor);
+    </script>
+</body>
+</html>
